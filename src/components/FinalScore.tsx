@@ -1,3 +1,5 @@
+import { Confetti } from './Confetti';
+import { ShareCard } from './ShareCard';
 import { verdict } from '../lib/explain';
 import { articleFor, formatArea } from '../lib/format';
 import { POINTS_PER_CORRECT, QUESTIONS_PER_ROUND } from '../lib/quiz';
@@ -13,15 +15,17 @@ interface FinalScoreProps {
 export function FinalScore({ questions, answers, score, onPlayAgain }: FinalScoreProps) {
   const correct = answers.filter((a) => a.correct).length;
   const maximum = QUESTIONS_PER_ROUND * POINTS_PER_CORRECT;
+  const verdictLine = verdict(score);
 
   return (
     <section className="final">
+      <Confetti intensity={score} />
       <p className="final__label">Round complete</p>
       <p className="final__score">
         {score}
         <span className="final__outof"> / {maximum}</span>
       </p>
-      <p className="final__verdict">{verdict(score)}</p>
+      <p className="final__verdict">{verdictLine}</p>
       <p className="final__tally">
         {correct} of {QUESTIONS_PER_ROUND} right
       </p>
@@ -57,6 +61,8 @@ export function FinalScore({ questions, answers, score, onPlayAgain }: FinalScor
           );
         })}
       </ol>
+
+      <ShareCard result={{ questions, answers, score }} verdictLine={verdictLine} />
 
       <button type="button" className="button button--next final__again" onClick={onPlayAgain}>
         Play again

@@ -47,6 +47,30 @@ so the value drops below 1 exactly when the projection reverses the answer).
 The explanation text branches on those two numbers alone — see
 `src/lib/explain.ts`. No sentence is written per country.
 
+### The end of a round
+
+Finishing a round fires a short canvas confetti burst (`src/lib/confetti.ts`,
+no dependency, sized by your score, silent under `prefers-reduced-motion`) and
+builds a score card you can post.
+
+The card is drawn on a canvas at 1200×630 — the shape timelines want — and
+includes the round's *most misleading pair*, drawn through the same shared-scale
+Mercator projection the quiz uses, with the same generated explanation
+underneath. **Share result** hands the browser a PNG through the Web Share API
+where that is supported, falls back to a text share, and failing that copies the
+text to the clipboard. **Save image** downloads the PNG.
+
+The text share is a Wordle-style grid built from the actual round:
+
+```
+Guess the giant 60/100
+
+🟩🟥🟩🟩🟥
+🟩🟩🟥🟩🟩
+
+Mercator flipped 4 of my 10 pairs.
+```
+
 ### Choosing the questions
 
 From a pool of 75 countries spanning every latitude, a pair is eligible when the
@@ -98,8 +122,10 @@ fails Railway's healthcheck — and listens on `process.env.PORT`.
 data/country-areas.json   committed static dataset: pool + real areas
 scripts/build-data.mjs    build-time projection maths -> src/data/
 server.js                 Express, serves dist/ on $PORT
-src/components/           MapPanel, QuestionCard, ResultPanel, ProgressBar, FinalScore
-src/lib/                  geo (projections), quiz (pair selection), explain, format
+src/components/           MapPanel, QuestionCard, ResultPanel, ProgressBar,
+                          FinalScore, ShareCard, Confetti
+src/lib/                  geo (projections), quiz (pair selection), explain,
+                          format, share (score card), confetti
 src/data/                 generated: countries.json, world-110m.json
 ```
 

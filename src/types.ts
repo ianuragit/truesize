@@ -6,6 +6,12 @@ export interface Country {
   id: string;
   name: string;
   trueAreaKm2: number;
+  /**
+   * How far the Natural Earth outline's own area is from `trueAreaKm2`, as a
+   * fraction. The build fails past ±8%; kept here so the discrepancy is
+   * visible rather than silent.
+   */
+  areaError: number;
   /** Spherical centroid, degrees. */
   lat: number;
   lon: number;

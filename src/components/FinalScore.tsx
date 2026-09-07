@@ -1,7 +1,7 @@
 import { Confetti } from './Confetti';
 import { ShareCard } from './ShareCard';
 import { verdict } from '../lib/explain';
-import { articleFor, formatArea } from '../lib/format';
+import { articleFor, formatArea, formatCount } from '../lib/format';
 import { POINTS_PER_CORRECT, QUESTIONS_PER_ROUND } from '../lib/quiz';
 import type { Answer, Question } from '../types';
 
@@ -9,10 +9,18 @@ interface FinalScoreProps {
   questions: Question[];
   answers: Answer[];
   score: number;
+  /** Already includes the round just finished. */
+  gamesPlayed: number;
   onPlayAgain: () => void;
 }
 
-export function FinalScore({ questions, answers, score, onPlayAgain }: FinalScoreProps) {
+export function FinalScore({
+  questions,
+  answers,
+  score,
+  gamesPlayed,
+  onPlayAgain,
+}: FinalScoreProps) {
   const correct = answers.filter((a) => a.correct).length;
   const maximum = QUESTIONS_PER_ROUND * POINTS_PER_CORRECT;
   const verdictLine = verdict(score);
@@ -28,6 +36,10 @@ export function FinalScore({ questions, answers, score, onPlayAgain }: FinalScor
       <p className="final__verdict">{verdictLine}</p>
       <p className="final__tally">
         {correct} of {QUESTIONS_PER_ROUND} right
+        <span className="final__separator" aria-hidden="true">
+          ·
+        </span>
+        {formatCount(gamesPlayed)} games played
       </p>
 
       <ol className="review">

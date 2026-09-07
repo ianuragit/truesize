@@ -1,7 +1,9 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { FinalScore } from './components/FinalScore';
 import { ProgressBar } from './components/ProgressBar';
 import { QuestionCard } from './components/QuestionCard';
+import { formatCount } from './lib/format';
+import { gamesPlayed, recordGamePlayed } from './lib/gamesPlayed';
 import { POINTS_PER_CORRECT, QUESTIONS_PER_ROUND, buildRound } from './lib/quiz';
 import type { Answer, Question } from './types';
 
@@ -16,6 +18,10 @@ const newRound = (): RoundState => ({ questions: buildRound(), answers: [], inde
 
 export default function App() {
   const [round, setRound] = useState<RoundState>(newRound);
+  const [played, setPlayed] = useState(gamesPlayed);
+  // Whether the round on screen has already been counted, so a fast double
+  // click on the first question cannot tally the same game twice.
+  const countedRound = useRef(false);
   const { questions, answers, index } = round;
 
   const finished = index >= QUESTIONS_PER_ROUND;
@@ -24,6 +30,11 @@ export default function App() {
   const currentAnswer = answers[index] ?? null;
 
   const handleAnswer = useCallback((saidBigger: boolean) => {
+    // A game counts from its first answer, not from finishing it.
+    if (!countedRound.current) {
+      countedRound.current = true;
+      setPlayed(recordGamePlayed());
+    }
     setRound((state) => {
       if (state.answers[state.index]) return state;
       const question = state.questions[state.index];
@@ -44,6 +55,7 @@ export default function App() {
           <p className="masthead__tagline">
             Ten countries, drawn the way Mercator draws them. Trust the map at your peril.
           </p>
+          <p className="masthead__played">{formatCount(played)} games played</p>
         </div>
         <div className="masthead__score">
           <span className="masthead__number">{score}</span>
@@ -63,7 +75,11 @@ export default function App() {
             questions={questions}
             answers={answers}
             score={score}
-            onPlayAgain={() => setRound(newRound())}
+            gamesPlayed={played}
+            onPlayAgain={() => {
+              countedRound.current = false;
+              setRound(newRound());
+            }}
           />
         ) : (
           <QuestionCard

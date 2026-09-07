@@ -47,6 +47,33 @@ so the value drops below 1 exactly when the projection reverses the answer).
 The explanation text branches on those two numbers alone — see
 `src/lib/explain.ts`. No sentence is written per country.
 
+### Games played
+
+A tally sits under the masthead and again beside the final tally. It counts a
+game from the moment its **first question is answered**, so a round someone
+abandons halfway still counts.
+
+It is **per browser, not global**. There is no server-side state in this app —
+`src/lib/gamesPlayed.ts` keeps the number in `localStorage`, seeded once per
+browser at a random value between 200 and 300 so it does not open at zero. Two
+people therefore see two different numbers, and clearing site data resets one of
+them. Making it a true site-wide total would mean giving `server.js` somewhere
+to persist a count; see *A real shared counter* below.
+
+Where storage is unavailable — a private window, blocked cookies — every read
+and write is caught and the count falls back to memory, so it still seeds and
+still increments for the length of the session.
+
+#### A real shared counter
+
+If the number should be everybody's rather than each visitor's, the smallest
+honest version is two routes on the existing Express server (`GET /api/plays`,
+`POST /api/plays`) over a single integer. Railway's filesystem is ephemeral, so
+a JSON file on disk resets on every deploy; a Railway Postgres or Redis add-on,
+or any hosted key-value store, would hold it properly. That is a real change in
+kind — the app currently has no backend state at all — so it is deliberately not
+done here.
+
 ### The end of a round
 
 Finishing a round fires a short canvas confetti burst (`src/lib/confetti.ts`,
@@ -148,7 +175,7 @@ server.js                 Express, serves dist/ on $PORT
 src/components/           MapPanel, QuestionCard, ResultPanel, ProgressBar,
                           FinalScore, ShareCard, Confetti
 src/lib/                  geo (projections), quiz (pair selection), explain,
-                          format, share (score card), confetti
+                          format, share (score card), confetti, gamesPlayed
 src/data/                 generated: countries.json, world-110m.json
 ```
 

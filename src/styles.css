@@ -76,6 +76,25 @@ body {
   line-height: 1.45;
 }
 
+.masthead__played {
+  margin: 8px 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.masthead__played::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  vertical-align: middle;
+}
+
 .masthead__score {
   display: flex;
   flex-direction: column;
@@ -452,6 +471,12 @@ body {
   margin: 4px 0 0;
   font-size: 13px;
   color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.final__separator {
+  padding: 0 7px;
+  color: var(--faint);
 }
 
 .review {

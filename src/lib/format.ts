@@ -26,6 +26,11 @@ export function formatArea(km2: number): string {
   return `${groups.format(Math.round(km2))} sq km`;
 }
 
+/** `1,204` */
+export function formatCount(value: number): string {
+  return groups.format(value);
+}
+
 /**
  * A ratio as people say it out loud: `1.1`, `2.4`, `17`. Drops the decimal
  * once the number is big enough that the tenth stops carrying information.

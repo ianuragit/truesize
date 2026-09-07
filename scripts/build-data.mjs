@@ -15,7 +15,7 @@
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { geoPath, geoMercator, geoEqualEarth, geoCentroid } from 'd3-geo';
+import { geoPath, geoMercator, geoEqualEarth, geoCentroid, geoArea } from 'd3-geo';
 import { feature } from 'topojson-client';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -36,6 +36,25 @@ const REF_SCALE = 500;
 const COVERAGE = 0.9;
 /** ...and never keep a polygon smaller than this share of the whole. */
 const MIN_SHARE = 0.01;
+
+/** Mean Earth radius, for turning steradians into square kilometres. */
+const EARTH_RADIUS_KM = 6371.0088;
+
+/**
+ * How far a country's outline may disagree with its quoted area.
+ *
+ * These are independent sources — Natural Earth's polygon and the Factbook's
+ * figure — and they part company whenever the two disagree about disputed
+ * territory (Western Sahara, Somaliland, Kashmir, Crimea) or about whether
+ * inland water counts. That matters because the Equal Earth panel is the
+ * quiz's proof: it draws areas straight from the outline, and is supposed to
+ * confirm the areas printed under it. A country whose outline is a third too
+ * big would have that panel contradict its own caption.
+ *
+ * Simplification at 1:110m alone costs a few per cent, so the tolerance sits
+ * above that and below the point where a viewer could see the difference.
+ */
+const AREA_TOLERANCE = 0.08;
 
 const src = JSON.parse(readFileSync(resolve(root, 'data/country-areas.json'), 'utf8'));
 const atlasPath = resolve(root, 'node_modules/world-atlas/countries-110m.json');
@@ -148,11 +167,16 @@ const countries = src.countries.map((c) => {
   const mercatorArea = Math.abs(geoPath(project('mercator', rotateLon, K)).area(f));
   const equalEarthArea = Math.abs(geoPath(project('equalEarth', rotateLon, K)).area(f));
 
+  // How far this outline is from the area printed under it. See AREA_TOLERANCE.
+  const outlineKm2 = geoArea(f) * EARTH_RADIUS_KM * EARTH_RADIUS_KM;
+  const areaError = outlineKm2 / c.trueAreaKm2 - 1;
+
   return {
     iso3: c.iso3,
     id: c.id,
     name: c.name,
     trueAreaKm2: c.trueAreaKm2,
+    areaError: Number(areaError.toFixed(4)),
     lat: Number(centroid[1].toFixed(3)),
     lon: Number(centroid[0].toFixed(3)),
     rotateLon: Number(rotateLon.toFixed(3)),
@@ -164,6 +188,23 @@ const countries = src.countries.map((c) => {
   };
 });
 
+const asPercent = (error) => `${error >= 0 ? '+' : ''}${(error * 100).toFixed(1)}%`;
+
+// Fail the build rather than ship a country whose Equal Earth panel would
+// argue with the area printed under it.
+const mismatched = countries.filter((c) => Math.abs(c.areaError) > AREA_TOLERANCE);
+if (mismatched.length > 0) {
+  const detail = mismatched
+    .map((c) => `  ${c.name} (${c.iso3}): outline is ${asPercent(c.areaError)} of its quoted area`)
+    .join('\n');
+  throw new Error(
+    `${mismatched.length} country outline(s) disagree with data/country-areas.json by more ` +
+      `than ${(AREA_TOLERANCE * 100).toFixed(0)}%:\n${detail}\n` +
+      'Either the quoted area is wrong, or Natural Earth draws different territory. ' +
+      'Correct the figure or drop the country from the pool.',
+  );
+}
+
 const outDir = resolve(root, 'src/data');
 mkdirSync(outDir, { recursive: true });
 
@@ -174,8 +215,13 @@ writeFileSync(
 );
 
 const sorted = [...countries].sort((a, b) => a.inflation - b.inflation);
+const worstArea = countries.reduce((w, c) => (Math.abs(c.areaError) > Math.abs(w.areaError) ? c : w));
 console.log(`build-data: ${countries.length} countries -> src/data/countries.json`);
 console.log(`build-data: equatorial baseline ${BASELINE.toFixed(6)}`);
+console.log(
+  `build-data: outlines within ±${(AREA_TOLERANCE * 100).toFixed(0)}% of quoted area ` +
+    `(worst: ${worstArea.name} ${asPercent(worstArea.areaError)})`,
+);
 console.log(
   `build-data: inflation ranges ${sorted[0].name} ${sorted[0].inflation.toFixed(2)}x ` +
     `to ${sorted[sorted.length - 1].name} ${sorted[sorted.length - 1].inflation.toFixed(2)}x`,

@@ -1,7 +1,9 @@
 import data from '../data/countries.json';
 import type { Country, Distortion, Question } from '../types';
 
-export const COUNTRIES = data.countries as Country[];
+// Through `unknown` because a JSON import widens the bounds tuples to
+// number[][], which no longer overlaps the Bounds tuple type structurally.
+export const COUNTRIES = data.countries as unknown as Country[];
 
 export const QUESTIONS_PER_ROUND = 10;
 export const POINTS_PER_CORRECT = 10;

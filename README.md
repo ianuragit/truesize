@@ -73,11 +73,34 @@ Mercator flipped 4 of my 10 pairs.
 
 ### Choosing the questions
 
-From a pool of 75 countries spanning every latitude, a pair is eligible when the
+From a pool of 84 countries spanning every latitude, a pair is eligible when the
 true areas differ by 5–200%, the two countries sit at least 12° of latitude
-apart, and one is inflated at least 1.2× more than the other. That yields ~758
-pairs, of which ~240 are outright reversals. Each round takes ten of them, no
+apart, and one is inflated at least 1.2× more than the other. That yields 942
+pairs, of which 286 are outright reversals. Each round takes ten of them, no
 country twice, with at least three where the map argues against the truth.
+
+**Every round is reshuffled.** `buildRound()` runs on load and again on *Play
+again*, and randomises four separate things: which deceptive pairs open the
+round, which pairs fill it out, the order they are asked in, and which country
+of each pair is named first (so "Bigger" is not always the answer). Over 500
+simulated rounds, 755 of the 942 eligible pairs turned up and no two rounds
+matched. Nothing is seeded, so there is no daily puzzle shared between players —
+two people opening the link get different questions.
+
+### Adding a country
+
+Add a row to `data/country-areas.json` — `iso3`, `id` (the numeric ISO 3166-1
+code, which is the feature id in the atlas), `name`, `trueAreaKm2` — and run
+`npm run data`. Two rules are enforced for you:
+
+- **The outline must match the area.** The build measures each country's
+  geodesic area from its own outline and fails if it is more than 8% from the
+  quoted figure. Natural Earth and the Factbook disagree wherever they disagree
+  about disputed territory or inland water, and the Equal Earth panel draws its
+  areas from the outline — so a country that fails this check would have that
+  panel contradict the number printed beneath it.
+- **Nothing under ~145,000 km².** At 1:110m a country that small is drawn as an
+  unrecognisable polygon once a pair of them is scaled up to fill a panel.
 
 ## Local development
 
@@ -135,12 +158,23 @@ Areas are total area (land plus inland water) from the CIA World Factbook.
 Outlines are Natural Earth 1:110m via [world-atlas][], matched by numeric ISO
 3166-1 code.
 
-Three deliberate omissions keep what is drawn and what is measured the same
-country:
+The two are independent sources and they do not always agree, so the build
+enforces the ±8% check described under *Adding a country*. That rule, plus the
+~145,000 km² floor, is what keeps these out of the pool:
 
-- **France** and **Norway** — their Natural Earth outlines include territory
-  (the overseas departments; Svalbard) that the quoted area excludes.
-- **Anything below ~145,000 km²** — at 1:110m, a country that small becomes an
-  unrecognisable polygon once a pair of them is scaled up to fill a panel.
+| excluded | outline vs quoted area | why |
+| --- | --- | --- |
+| Morocco | +33% | Natural Earth's outline takes in Western Sahara |
+| Somalia | −24% | Somaliland is a separate outline in the atlas |
+| Yemen | −13% | |
+| Ecuador | −11% | the Galápagos are in the Factbook figure, not the outline |
+| Suriname | −12% | |
+| Saudi Arabia | −10% | |
+| Pakistan | +10% | the outline includes Pakistan-administered Kashmir |
+| Bangladesh | −10% | the Factbook figure counts a lot of river |
+| France, Norway | — | outlines include the overseas departments; Svalbard |
+
+Of the countries that remain, Chile is the furthest out at +7.7%, which is
+within simplification noise at this resolution.
 
 [world-atlas]: https://github.com/topojson/world-atlas

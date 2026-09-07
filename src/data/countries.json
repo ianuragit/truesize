@@ -7,6 +7,7 @@
    "id": "643",
    "name": "Russia",
    "trueAreaKm2": 17098242,
+   "areaError": -0.0102,
    "lat": 66.068,
    "lon": 95.785,
    "rotateLon": 95.785,
@@ -39,6 +40,7 @@
    "id": "124",
    "name": "Canada",
    "trueAreaKm2": 9984670,
+   "areaError": 0,
    "lat": 60.477,
    "lon": -96.396,
    "rotateLon": -96.396,
@@ -71,6 +73,7 @@
    "id": "840",
    "name": "United States",
    "trueAreaKm2": 9833517,
+   "areaError": -0.0345,
    "lat": 44.756,
    "lon": -103.573,
    "rotateLon": -103.573,
@@ -103,6 +106,7 @@
    "id": "156",
    "name": "China",
    "trueAreaKm2": 9596960,
+   "areaError": -0.0197,
    "lat": 36.683,
    "lon": 103.453,
    "rotateLon": 103.453,
@@ -135,6 +139,7 @@
    "id": "076",
    "name": "Brazil",
    "trueAreaKm2": 8515770,
+   "areaError": 0.0029,
    "lat": -10.655,
    "lon": -53.173,
    "rotateLon": -53.173,
@@ -167,6 +172,7 @@
    "id": "036",
    "name": "Australia",
    "trueAreaKm2": 7741220,
+   "areaError": -0.005,
    "lat": -25.763,
    "lon": 134.314,
    "rotateLon": 134.314,
@@ -199,6 +205,7 @@
    "id": "356",
    "name": "India",
    "trueAreaKm2": 3287263,
+   "areaError": -0.0416,
    "lat": 22.819,
    "lon": 79.54,
    "rotateLon": 79.54,
@@ -231,6 +238,7 @@
    "id": "032",
    "name": "Argentina",
    "trueAreaKm2": 2780400,
+   "areaError": 0.0015,
    "lat": -34.737,
    "lon": -64.754,
    "rotateLon": -64.754,
@@ -263,6 +271,7 @@
    "id": "398",
    "name": "Kazakhstan",
    "trueAreaKm2": 2724900,
+   "areaError": -0.0011,
    "lat": 48.406,
    "lon": 67.236,
    "rotateLon": 67.236,
@@ -295,6 +304,7 @@
    "id": "012",
    "name": "Algeria",
    "trueAreaKm2": 2381741,
+   "areaError": -0.0262,
    "lat": 28.085,
    "lon": 2.612,
    "rotateLon": 2.612,
@@ -327,6 +337,7 @@
    "id": "180",
    "name": "DR Congo",
    "trueAreaKm2": 2344858,
+   "areaError": -0.0048,
    "lat": -2.839,
    "lon": 23.577,
    "rotateLon": 23.577,
@@ -359,6 +370,7 @@
    "id": "304",
    "name": "Greenland",
    "trueAreaKm2": 2166086,
+   "areaError": 0.0109,
    "lat": 73.151,
    "lon": -41.965,
    "rotateLon": -41.965,
@@ -387,42 +399,11 @@
    ]
   },
   {
-   "iso3": "SAU",
-   "id": "682",
-   "name": "Saudi Arabia",
-   "trueAreaKm2": 2149690,
-   "lat": 24.089,
-   "lon": 44.641,
-   "rotateLon": 44.641,
-   "mercatorArea": 14298.403,
-   "equalEarthArea": 11852.364,
-   "inflation": 1.2062,
-   "mercatorBounds": [
-    [
-     -0.1747214249755814,
-     -0.5933468533446714
-    ],
-    [
-     0.19240876382480987,
-     -0.28926599537334075
-    ]
-   ],
-   "equalEarthBounds": [
-    [
-     -0.14200640382371668,
-     -0.6332161227243249
-    ],
-    [
-     0.15997185719787052,
-     -0.32880425601806257
-    ]
-   ]
-  },
-  {
    "iso3": "MEX",
    "id": "484",
    "name": "Mexico",
    "trueAreaKm2": 1964375,
+   "areaError": 0.0049,
    "lat": 23.913,
    "lon": -102.223,
    "rotateLon": -102.223,
@@ -455,6 +436,7 @@
    "id": "360",
    "name": "Indonesia",
    "trueAreaKm2": 1904569,
+   "areaError": -0.0404,
    "lat": -2.272,
    "lon": 117.365,
    "rotateLon": 117.365,
@@ -487,6 +469,7 @@
    "id": "729",
    "name": "Sudan",
    "trueAreaKm2": 1861484,
+   "areaError": -0.0023,
    "lat": 15.972,
    "lon": 29.831,
    "rotateLon": 29.831,
@@ -519,6 +502,7 @@
    "id": "434",
    "name": "Libya",
    "trueAreaKm2": 1759540,
+   "areaError": -0.0698,
    "lat": 26.988,
    "lon": 18.03,
    "rotateLon": 18.03,
@@ -551,6 +535,7 @@
    "id": "364",
    "name": "Iran",
    "trueAreaKm2": 1648195,
+   "areaError": -0.018,
    "lat": 32.474,
    "lon": 54.453,
    "rotateLon": 54.453,
@@ -583,6 +568,7 @@
    "id": "496",
    "name": "Mongolia",
    "trueAreaKm2": 1564116,
+   "areaError": -0.0152,
    "lat": 46.954,
    "lon": 103.016,
    "rotateLon": 103.016,
@@ -615,6 +601,7 @@
    "id": "604",
    "name": "Peru",
    "trueAreaKm2": 1285216,
+   "areaError": 0.0233,
    "lat": -9.147,
    "lon": -74.431,
    "rotateLon": -74.431,
@@ -647,6 +634,7 @@
    "id": "148",
    "name": "Chad",
    "trueAreaKm2": 1284000,
+   "areaError": -0.0062,
    "lat": 15.276,
    "lon": 18.574,
    "rotateLon": 18.574,
@@ -679,6 +667,7 @@
    "id": "562",
    "name": "Niger",
    "trueAreaKm2": 1267000,
+   "areaError": -0.0638,
    "lat": 17.34,
    "lon": 9.275,
    "rotateLon": 9.275,
@@ -711,6 +700,7 @@
    "id": "024",
    "name": "Angola",
    "trueAreaKm2": 1246700,
+   "areaError": 0.0028,
    "lat": -12.226,
    "lon": 17.465,
    "rotateLon": 17.465,
@@ -743,6 +733,7 @@
    "id": "466",
    "name": "Mali",
    "trueAreaKm2": 1240192,
+   "areaError": -0.0005,
    "lat": 17.24,
    "lon": -3.593,
    "rotateLon": -3.593,
@@ -775,6 +766,7 @@
    "id": "710",
    "name": "South Africa",
    "trueAreaKm2": 1219090,
+   "areaError": -0.0009,
    "lat": -28.923,
    "lon": 25.158,
    "rotateLon": 25.158,
@@ -807,6 +799,7 @@
    "id": "170",
    "name": "Colombia",
    "trueAreaKm2": 1138910,
+   "areaError": 0.0159,
    "lat": 3.916,
    "lon": -73.073,
    "rotateLon": -73.073,
@@ -839,6 +832,7 @@
    "id": "231",
    "name": "Ethiopia",
    "trueAreaKm2": 1104300,
+   "areaError": 0.0296,
    "lat": 8.646,
    "lon": 39.56,
    "rotateLon": 39.56,
@@ -871,6 +865,7 @@
    "id": "068",
    "name": "Bolivia",
    "trueAreaKm2": 1098581,
+   "areaError": -0.0088,
    "lat": -16.704,
    "lon": -64.655,
    "rotateLon": -64.655,
@@ -903,6 +898,7 @@
    "id": "478",
    "name": "Mauritania",
    "trueAreaKm2": 1030700,
+   "areaError": 0.0258,
    "lat": 20.18,
    "lon": -10.349,
    "rotateLon": -10.349,
@@ -935,6 +931,7 @@
    "id": "818",
    "name": "Egypt",
    "trueAreaKm2": 1001450,
+   "areaError": -0.0034,
    "lat": 26.475,
    "lon": 29.861,
    "rotateLon": 29.861,
@@ -967,6 +964,7 @@
    "id": "834",
    "name": "Tanzania",
    "trueAreaKm2": 947300,
+   "areaError": -0.0111,
    "lat": -6.251,
    "lon": 34.742,
    "rotateLon": 34.742,
@@ -999,6 +997,7 @@
    "id": "566",
    "name": "Nigeria",
    "trueAreaKm2": 923768,
+   "areaError": -0.0162,
    "lat": 9.545,
    "lon": 7.986,
    "rotateLon": 7.986,
@@ -1031,6 +1030,7 @@
    "id": "862",
    "name": "Venezuela",
    "trueAreaKm2": 912050,
+   "areaError": 0.0003,
    "lat": 7.161,
    "lon": -66.153,
    "rotateLon": -66.153,
@@ -1063,6 +1063,7 @@
    "id": "516",
    "name": "Namibia",
    "trueAreaKm2": 824292,
+   "areaError": 0.0034,
    "lat": -22.04,
    "lon": 17.142,
    "rotateLon": 17.142,
@@ -1095,6 +1096,7 @@
    "id": "508",
    "name": "Mozambique",
    "trueAreaKm2": 799380,
+   "areaError": 0.0179,
    "lat": -17.154,
    "lon": 35.542,
    "rotateLon": 35.542,
@@ -1123,42 +1125,11 @@
    ]
   },
   {
-   "iso3": "PAK",
-   "id": "586",
-   "name": "Pakistan",
-   "trueAreaKm2": 796095,
-   "lat": 29.908,
-   "lon": 69.235,
-   "rotateLon": 69.235,
-   "mercatorArea": 7216.977,
-   "equalEarthArea": 5390.907,
-   "inflation": 1.3385,
-   "mercatorBounds": [
-    [
-     -0.1459124961900844,
-     -0.698910674861512
-    ],
-    [
-     0.15015415615074135,
-     -0.4258044101055964
-    ]
-   ],
-   "equalEarthBounds": [
-    [
-     -0.11767724890203592,
-     -0.7238478795931851
-    ],
-    [
-     0.11772460999384317,
-     -0.47270591861807665
-    ]
-   ]
-  },
-  {
    "iso3": "TUR",
    "id": "792",
    "name": "Turkey",
    "trueAreaKm2": 783562,
+   "areaError": 0.0186,
    "lat": 39.145,
    "lon": 35.117,
    "rotateLon": 35.117,
@@ -1191,6 +1162,7 @@
    "id": "152",
    "name": "Chile",
    "trueAreaKm2": 756102,
+   "areaError": 0.0772,
    "lat": -37.311,
    "lon": -71.178,
    "rotateLon": -71.178,
@@ -1223,6 +1195,7 @@
    "id": "894",
    "name": "Zambia",
    "trueAreaKm2": 752618,
+   "areaError": 0.0029,
    "lat": -13.393,
    "lon": 27.761,
    "rotateLon": 27.761,
@@ -1255,6 +1228,7 @@
    "id": "104",
    "name": "Myanmar",
    "trueAreaKm2": 676578,
+   "areaError": 0.007,
    "lat": 20.945,
    "lon": 96.513,
    "rotateLon": 96.513,
@@ -1287,6 +1261,7 @@
    "id": "004",
    "name": "Afghanistan",
    "trueAreaKm2": 652230,
+   "areaError": 0.0004,
    "lat": 33.84,
    "lon": 66.004,
    "rotateLon": 66.004,
@@ -1315,34 +1290,68 @@
    ]
   },
   {
-   "iso3": "SOM",
-   "id": "706",
-   "name": "Somalia",
-   "trueAreaKm2": 637657,
-   "lat": 4.741,
-   "lon": 45.699,
-   "rotateLon": 45.699,
-   "mercatorArea": 3026.773,
-   "equalEarthArea": 2996.311,
-   "inflation": 1.01,
+   "iso3": "SSD",
+   "id": "728",
+   "name": "South Sudan",
+   "trueAreaKm2": 644329,
+   "areaError": -0.0261,
+   "lat": 7.293,
+   "lon": 30.202,
+   "rotateLon": 30.202,
+   "mercatorArea": 3932.458,
+   "equalEarthArea": 3865.022,
+   "inflation": 1.0173,
    "mercatorBounds": [
     [
-     -0.08235290978684673,
-     -0.21142509769425594
+     -0.11019915292383842,
+     -0.21541361680135107
     ],
     [
-     0.09483468775159332,
-     0.029387185961967717
+     0.08891698062201792,
+     -0.06128630252532003
     ]
    ],
    "equalEarthBounds": [
     [
-     -0.07091088012189044,
-     -0.24265659059602618
+     -0.09442913847268247,
+     -0.24712928072967486
     ],
     [
-     0.08088561702232354,
-     0.03410231334046186
+     0.07643724084338117,
+     -0.07106746422619835
+    ]
+   ]
+  },
+  {
+   "iso3": "CAF",
+   "id": "140",
+   "name": "Central African Republic",
+   "trueAreaKm2": 622984,
+   "areaError": 0.0024,
+   "lat": 6.547,
+   "lon": 20.368,
+   "rotateLon": 20.368,
+   "mercatorArea": 3900.078,
+   "equalEarthArea": 3846.25,
+   "inflation": 1.0138,
+   "mercatorBounds": [
+    [
+     -0.10311620367601937,
+     -0.1957142307024459
+    ],
+    [
+     0.12226390709362023,
+     -0.03957541093802571
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.08864739759639488,
+     -0.2249842821680954
+    ],
+    [
+     0.10512624786470647,
+     -0.04591704038461154
     ]
    ]
   },
@@ -1351,6 +1360,7 @@
    "id": "804",
    "name": "Ukraine",
    "trueAreaKm2": 603550,
+   "areaError": -0.0544,
    "lat": 49.187,
    "lon": 31.292,
    "rotateLon": 31.292,
@@ -1383,6 +1393,7 @@
    "id": "450",
    "name": "Madagascar",
    "trueAreaKm2": 587041,
+   "areaError": 0.0068,
    "lat": -19.301,
    "lon": 46.729,
    "rotateLon": 46.729,
@@ -1415,6 +1426,7 @@
    "id": "072",
    "name": "Botswana",
    "trueAreaKm2": 581730,
+   "areaError": 0.0201,
    "lat": -22.082,
    "lon": 23.783,
    "rotateLon": 23.783,
@@ -1447,6 +1459,7 @@
    "id": "404",
    "name": "Kenya",
    "trueAreaKm2": 580367,
+   "areaError": 0.0227,
    "lat": 0.596,
    "lon": 37.791,
    "rotateLon": 37.791,
@@ -1479,6 +1492,7 @@
    "id": "764",
    "name": "Thailand",
    "trueAreaKm2": 513120,
+   "areaError": -0.0023,
    "lat": 14.981,
    "lon": 101.002,
    "rotateLon": 101.002,
@@ -1511,6 +1525,7 @@
    "id": "724",
    "name": "Spain",
    "trueAreaKm2": 505370,
+   "areaError": -0.0072,
    "lat": 40.321,
    "lon": -3.624,
    "rotateLon": -3.624,
@@ -1539,10 +1554,77 @@
    ]
   },
   {
+   "iso3": "TKM",
+   "id": "795",
+   "name": "Turkmenistan",
+   "trueAreaKm2": 488100,
+   "areaError": -0.0158,
+   "lat": 39.102,
+   "lon": 59.348,
+   "rotateLon": 59.348,
+   "mercatorArea": 4917.424,
+   "equalEarthArea": 2958.333,
+   "inflation": 1.662,
+   "mercatorBounds": [
+    [
+     -0.119507976061337,
+     -0.8269156920560058
+    ],
+    [
+     0.12560153386683814,
+     -0.6586012839976368
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.09021717232511602,
+     -0.8222207326780342
+    ],
+    [
+     0.09710341367442862,
+     -0.6902427706933145
+    ]
+   ]
+  },
+  {
+   "iso3": "CMR",
+   "id": "120",
+   "name": "Cameroon",
+   "trueAreaKm2": 475440,
+   "areaError": -0.0276,
+   "lat": 5.654,
+   "lon": 12.606,
+   "rotateLon": 12.606,
+   "mercatorArea": 2880.698,
+   "equalEarthArea": 2847.556,
+   "inflation": 1.0115,
+   "mercatorBounds": [
+    [
+     -0.07188807145938717,
+     -0.22633905911043042
+    ],
+    [
+     0.059431814659527404,
+     -0.03014615963750821
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.061843896930042656,
+     -0.2593511236933921
+    ],
+    [
+     0.051184163899738525,
+     -0.03498266222135921
+    ]
+   ]
+  },
+  {
    "iso3": "PNG",
    "id": "598",
    "name": "Papua New Guinea",
    "trueAreaKm2": 462840,
+   "areaError": 0.0079,
    "lat": -6.457,
    "lon": 145.313,
    "rotateLon": 145.313,
@@ -1575,6 +1657,7 @@
    "id": "752",
    "name": "Sweden",
    "trueAreaKm2": 450295,
+   "areaError": -0.0055,
    "lat": 62.419,
    "lon": 16.109,
    "rotateLon": 16.109,
@@ -1607,6 +1690,7 @@
    "id": "860",
    "name": "Uzbekistan",
    "trueAreaKm2": 447400,
+   "areaError": 0.0297,
    "lat": 41.771,
    "lon": 63.365,
    "rotateLon": 63.365,
@@ -1635,42 +1719,11 @@
    ]
   },
   {
-   "iso3": "MAR",
-   "id": "504",
-   "name": "Morocco",
-   "trueAreaKm2": 446550,
-   "lat": 29.815,
-   "lon": -8.694,
-   "rotateLon": -8.694,
-   "mercatorArea": 4882.002,
-   "equalEarthArea": 3649.157,
-   "inflation": 1.3376,
-   "mercatorBounds": [
-    [
-     -0.14530742608109448,
-     -0.669089822699483
-    ],
-    [
-     0.13209797928493783,
-     -0.3828733756545923
-    ]
-   ],
-   "equalEarthBounds": [
-    [
-     -0.12103685046590078,
-     -0.6991070785425316
-    ],
-    [
-     0.10511707120327524,
-     -0.4285918595857633
-    ]
-   ]
-  },
-  {
    "iso3": "IRQ",
    "id": "368",
    "name": "Iraq",
    "trueAreaKm2": 438317,
+   "areaError": -0.0025,
    "lat": 33.01,
    "lon": 43.787,
    "rotateLon": 43.787,
@@ -1703,6 +1756,7 @@
    "id": "600",
    "name": "Paraguay",
    "trueAreaKm2": 406752,
+   "areaError": -0.0109,
    "lat": -23.23,
    "lon": -58.432,
    "rotateLon": -58.432,
@@ -1735,6 +1789,7 @@
    "id": "716",
    "name": "Zimbabwe",
    "trueAreaKm2": 390757,
+   "areaError": -0.034,
    "lat": -18.9,
    "lon": 29.789,
    "rotateLon": 29.789,
@@ -1767,6 +1822,7 @@
    "id": "392",
    "name": "Japan",
    "trueAreaKm2": 377915,
+   "areaError": 0.0701,
    "lat": 37.537,
    "lon": 137.712,
    "rotateLon": 137.712,
@@ -1799,6 +1855,7 @@
    "id": "276",
    "name": "Germany",
    "trueAreaKm2": 357022,
+   "areaError": -0.0026,
    "lat": 51.077,
    "lon": 10.27,
    "rotateLon": 10.27,
@@ -1831,6 +1888,7 @@
    "id": "178",
    "name": "Congo",
    "trueAreaKm2": 342000,
+   "areaError": -0.0023,
    "lat": -0.837,
    "lon": 15.136,
    "rotateLon": 15.136,
@@ -1863,6 +1921,7 @@
    "id": "246",
    "name": "Finland",
    "trueAreaKm2": 338145,
+   "areaError": 0.0027,
    "lat": 64.261,
    "lon": 26.142,
    "rotateLon": 26.142,
@@ -1895,6 +1954,7 @@
    "id": "704",
    "name": "Vietnam",
    "trueAreaKm2": 331210,
+   "areaError": 0.0179,
    "lat": 16.556,
    "lon": 106.333,
    "rotateLon": 106.333,
@@ -1927,6 +1987,7 @@
    "id": "458",
    "name": "Malaysia",
    "trueAreaKm2": 329847,
+   "areaError": 0.03,
    "lat": 3.746,
    "lon": 109.7,
    "rotateLon": 109.7,
@@ -1955,10 +2016,44 @@
    ]
   },
   {
+   "iso3": "CIV",
+   "id": "384",
+   "name": "Côte d'Ivoire",
+   "trueAreaKm2": 322463,
+   "areaError": 0.0273,
+   "lat": 7.552,
+   "lon": -5.612,
+   "rotateLon": -5.612,
+   "mercatorArea": 2077.561,
+   "equalEarthArea": 2040.235,
+   "inflation": 1.0181,
+   "mercatorBounds": [
+    [
+     -0.052192786916579456,
+     -0.18473614428833177
+    ],
+    [
+     0.053240116866931884,
+     -0.0757953954755308
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.04482976376192771,
+     -0.2125865639292498
+    ],
+    [
+     0.04564360911959306,
+     -0.08784791260181164
+    ]
+   ]
+  },
+  {
    "iso3": "POL",
    "id": "616",
    "name": "Poland",
    "trueAreaKm2": 312685,
+   "areaError": -0.0112,
    "lat": 52.134,
    "lon": 19.344,
    "rotateLon": 19.344,
@@ -1987,10 +2082,44 @@
    ]
   },
   {
+   "iso3": "OMN",
+   "id": "512",
+   "name": "Oman",
+   "trueAreaKm2": 309500,
+   "areaError": 0.0023,
+   "lat": 20.592,
+   "lon": 56.068,
+   "rotateLon": 56.068,
+   "mercatorArea": 2183.012,
+   "equalEarthArea": 1909.513,
+   "inflation": 1.1431,
+   "mercatorBounds": [
+    [
+     -0.07098287731056006,
+     -0.4494351927510593
+    ],
+    [
+     0.06530077483868679,
+     -0.29478086220720157
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.0595571522933261,
+     -0.4964998183501152
+    ],
+    [
+     0.05419635423514386,
+     -0.33480753132927615
+    ]
+   ]
+  },
+  {
    "iso3": "ITA",
    "id": "380",
    "name": "Italy",
    "trueAreaKm2": 301340,
+   "areaError": 0.0438,
    "lat": 42.671,
    "lon": 12.269,
    "rotateLon": 12.269,
@@ -2023,6 +2152,7 @@
    "id": "608",
    "name": "Philippines",
    "trueAreaKm2": 300000,
+   "areaError": -0.0225,
    "lat": 11.72,
    "lon": 122.938,
    "rotateLon": 122.938,
@@ -2051,34 +2181,35 @@
    ]
   },
   {
-   "iso3": "ECU",
-   "id": "218",
-   "name": "Ecuador",
-   "trueAreaKm2": 283561,
-   "lat": -1.454,
-   "lon": -78.384,
-   "rotateLon": -78.384,
-   "mercatorArea": 1553.178,
-   "equalEarthArea": 1551.259,
-   "inflation": 1.0011,
+   "iso3": "BFA",
+   "id": "854",
+   "name": "Burkina Faso",
+   "trueAreaKm2": 274200,
+   "areaError": -0.0057,
+   "lat": 12.313,
+   "lon": -1.783,
+   "rotateLon": -1.783,
+   "mercatorArea": 1759.949,
+   "equalEarthArea": 1679.138,
+   "inflation": 1.048,
    "mercatorBounds": [
     [
-     -0.04508036207333377,
-     -0.024117625320442437
+     -0.06435890617609263,
+     -0.26695359465111446
     ],
     [
-     0.05494894831006891,
-     0.08665248851325556
+     0.06909728431030662,
+     -0.16853448990159656
     ]
    ],
    "equalEarthBounds": [
     [
-     -0.03882458646281436,
-     -0.027989261671371897
+     -0.05496520530406209,
+     -0.3043725135663949
     ],
     [
-     0.04733824312855096,
-     0.10038661121925423
+     0.05884171427233509,
+     -0.1942210188835677
     ]
    ]
   },
@@ -2087,6 +2218,7 @@
    "id": "554",
    "name": "New Zealand",
    "trueAreaKm2": 268838,
+   "areaError": 0.0312,
    "lat": -41.551,
    "lon": 172.951,
    "rotateLon": 172.951,
@@ -2119,6 +2251,7 @@
    "id": "266",
    "name": "Gabon",
    "trueAreaKm2": 267667,
+   "areaError": 0.0113,
    "lat": -0.647,
    "lon": 11.687,
    "rotateLon": 11.687,
@@ -2147,10 +2280,44 @@
    ]
   },
   {
+   "iso3": "GIN",
+   "id": "324",
+   "name": "Guinea",
+   "trueAreaKm2": 245857,
+   "areaError": -0.0217,
+   "lat": 10.45,
+   "lon": -11.055,
+   "rotateLon": -11.055,
+   "mercatorArea": 1532.488,
+   "equalEarthArea": 1481.477,
+   "inflation": 1.0343,
+   "mercatorBounds": [
+    [
+     -0.07110392997717008,
+     -0.2214632852246245
+    ],
+    [
+     0.0562575098137581,
+     -0.1279142940757127
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.06071697539416481,
+     -0.2539022748567956
+    ],
+    [
+     0.048209459636984024,
+     -0.14785722479673183
+    ]
+   ]
+  },
+  {
    "iso3": "GBR",
    "id": "826",
    "name": "United Kingdom",
    "trueAreaKm2": 243610,
+   "areaError": 0.0219,
    "lat": 53.809,
    "lon": -2.76,
    "rotateLon": -2.76,
@@ -2183,6 +2350,7 @@
    "id": "800",
    "name": "Uganda",
    "trueAreaKm2": 241038,
+   "areaError": 0.0242,
    "lat": 1.295,
    "lon": 32.357,
    "rotateLon": 32.357,
@@ -2211,42 +2379,11 @@
    ]
   },
   {
-   "iso3": "ROU",
-   "id": "642",
-   "name": "Romania",
-   "trueAreaKm2": 238391,
-   "lat": 45.853,
-   "lon": 24.954,
-   "rotateLon": 24.954,
-   "mercatorArea": 3022.019,
-   "equalEarthArea": 1464.6,
-   "inflation": 2.0631,
-   "mercatorBounds": [
-    [
-     -0.08263214437923166,
-     -0.9632586805279971
-    ],
-    [
-     0.08154912951010979,
-     -0.849374063206649
-    ]
-   ],
-   "equalEarthBounds": [
-    [
-     -0.06051526893825788,
-     -0.9131549210765468
-    ],
-    [
-     0.06019912097150311,
-     -0.8381717734155725
-    ]
-   ]
-  },
-  {
    "iso3": "GHA",
    "id": "288",
    "name": "Ghana",
    "trueAreaKm2": 238533,
+   "areaError": 0.0249,
    "lat": 7.923,
    "lon": -1.237,
    "rotateLon": -1.237,
@@ -2275,10 +2412,110 @@
    ]
   },
   {
+   "iso3": "ROU",
+   "id": "642",
+   "name": "Romania",
+   "trueAreaKm2": 238391,
+   "areaError": -0.0026,
+   "lat": 45.853,
+   "lon": 24.954,
+   "rotateLon": 24.954,
+   "mercatorArea": 3022.019,
+   "equalEarthArea": 1464.6,
+   "inflation": 2.0631,
+   "mercatorBounds": [
+    [
+     -0.08263214437923166,
+     -0.9632586805279971
+    ],
+    [
+     0.08154912951010979,
+     -0.849374063206649
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.06051526893825788,
+     -0.9131549210765468
+    ],
+    [
+     0.06019912097150311,
+     -0.8381717734155725
+    ]
+   ]
+  },
+  {
+   "iso3": "LAO",
+   "id": "418",
+   "name": "Laos",
+   "trueAreaKm2": 236800,
+   "areaError": -0.0296,
+   "lat": 18.431,
+   "lon": 103.787,
+   "rotateLon": 103.787,
+   "mercatorArea": 1575.004,
+   "equalEarthArea": 1415.191,
+   "inflation": 1.1128,
+   "mercatorBounds": [
+    [
+     -0.06408850651025122,
+     -0.4025237653384496
+    ],
+    [
+     0.06591189749933468,
+     -0.24467899037872295
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.053550435359603306,
+     -0.4489221725005417
+    ],
+    [
+     0.05583457832975261,
+     -0.2797644414264323
+    ]
+   ]
+  },
+  {
+   "iso3": "GUY",
+   "id": "328",
+   "name": "Guyana",
+   "trueAreaKm2": 214969,
+   "areaError": -0.0196,
+   "lat": 4.786,
+   "lon": -58.969,
+   "rotateLon": -58.969,
+   "mercatorArea": 1308.567,
+   "equalEarthArea": 1298.085,
+   "inflation": 1.0079,
+   "mercatorBounds": [
+    [
+     -0.0426175765495167,
+     -0.14655163237233432
+    ],
+    [
+     0.04239477078009657,
+     -0.022137867369007552
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.036622255913520405,
+     -0.16918208728687853
+    ],
+    [
+     0.03651550211759047,
+     -0.025692287205715862
+    ]
+   ]
+  },
+  {
    "iso3": "BLR",
    "id": "112",
    "name": "Belarus",
    "trueAreaKm2": 207600,
+   "areaError": 0.0025,
    "lat": 53.495,
    "lon": 27.965,
    "rotateLon": 27.965,
@@ -2307,10 +2544,143 @@
    ]
   },
   {
+   "iso3": "KGZ",
+   "id": "417",
+   "name": "Kyrgyzstan",
+   "trueAreaKm2": 199951,
+   "areaError": -0.0214,
+   "lat": 41.519,
+   "lon": 74.587,
+   "rotateLon": 74.587,
+   "mercatorArea": 2150.144,
+   "equalEarthArea": 1205.193,
+   "inflation": 1.7838,
+   "mercatorBounds": [
+    [
+     -0.08940583503877342,
+     -0.839967611987616
+    ],
+    [
+     0.09902877666965915,
+     -0.7465860048385983
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.06847087821315297,
+     -0.8315380956333334
+    ],
+    [
+     0.0744767015426365,
+     -0.7619729333250581
+    ]
+   ]
+  },
+  {
+   "iso3": "SEN",
+   "id": "686",
+   "name": "Senegal",
+   "trueAreaKm2": 196722,
+   "areaError": -0.0084,
+   "lat": 14.354,
+   "lon": -14.506,
+   "rotateLon": -14.506,
+   "mercatorArea": 1280.784,
+   "equalEarthArea": 1201.576,
+   "inflation": 1.0658,
+   "mercatorBounds": [
+    [
+     -0.054419584323372405,
+     -0.2938251537244934
+    ],
+    [
+     0.05302395886483025,
+     -0.2169252979304087
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.046147241043261004,
+     -0.33376821541001805
+    ],
+    [
+     0.045143225445092576,
+     -0.2488229631847743
+    ]
+   ]
+  },
+  {
+   "iso3": "SYR",
+   "id": "760",
+   "name": "Syria",
+   "trueAreaKm2": 187437,
+   "areaError": -0.013,
+   "lat": 35.009,
+   "lon": 38.523,
+   "rotateLon": 38.523,
+   "mercatorArea": 1701.01,
+   "equalEarthArea": 1140.526,
+   "inflation": 1.4912,
+   "mercatorBounds": [
+    [
+     -0.049282635119336504,
+     -0.7010241133303511
+    ],
+    [
+     0.066768958020202,
+     -0.5964900479722356
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.03920411357869484,
+     -0.7255752571318199
+    ],
+    [
+     0.05184047097723402,
+     -0.6360363731927474
+    ]
+   ]
+  },
+  {
+   "iso3": "KHM",
+   "id": "116",
+   "name": "Cambodia",
+   "trueAreaKm2": 181035,
+   "areaError": 0.0106,
+   "lat": 12.685,
+   "lon": 104.874,
+   "rotateLon": 104.874,
+   "mercatorArea": 1184.355,
+   "equalEarthArea": 1126.903,
+   "inflation": 1.0508,
+   "mercatorBounds": [
+    [
+     -0.044102281092568855,
+     -0.25708249527299726
+    ],
+    [
+     0.04782163919067095,
+     -0.1840451245531478
+    ]
+   ],
+   "equalEarthBounds": [
+    [
+     -0.0375015164437031,
+     -0.2934932392632954
+    ],
+    [
+     0.04065278194784316,
+     -0.21180489247665818
+    ]
+   ]
+  },
+  {
    "iso3": "URY",
    "id": "858",
    "name": "Uruguay",
    "trueAreaKm2": 176215,
+   "areaError": 0.0044,
    "lat": -32.774,
    "lon": -56.01,
    "rotateLon": -56.01,
@@ -2339,34 +2709,35 @@
    ]
   },
   {
-   "iso3": "BGD",
-   "id": "050",
-   "name": "Bangladesh",
-   "trueAreaKm2": 148460,
-   "lat": 23.834,
-   "lon": 90.276,
-   "rotateLon": 90.276,
-   "mercatorArea": 987.529,
-   "equalEarthArea": 825.766,
-   "inflation": 1.1957,
+   "iso3": "TUN",
+   "id": "788",
+   "name": "Tunisia",
+   "trueAreaKm2": 163610,
+   "areaError": -0.0447,
+   "lat": 34.144,
+   "lon": 9.539,
+   "rotateLon": 9.539,
+   "mercatorArea": 1408.201,
+   "equalEarthArea": 962.774,
+   "inflation": 1.4624,
    "mercatorBounds": [
     [
-     -0.03826561170445353,
-     -0.47890562258667024
+     -0.035129919912625734,
+     -0.7036604277833093
     ],
     [
-     0.04184580207622424,
-     -0.36885143302355033
+     0.034048642105041965,
+     -0.555513564377766
     ]
    ],
    "equalEarthBounds": [
     [
-     -0.03154000537658318,
-     -0.5256649148843578
+     -0.027749128421373823,
+     -0.7277251560749156
     ],
     [
-     0.034786671052982325,
-     -0.4139465620174861
+     0.027028184650896233,
+     -0.5986983083183295
     ]
    ]
   },
@@ -2375,6 +2746,7 @@
    "id": "524",
    "name": "Nepal",
    "trueAreaKm2": 147181,
+   "areaError": 0.0254,
    "lat": 28.249,
    "lon": 84.043,
    "rotateLon": 84.043,
